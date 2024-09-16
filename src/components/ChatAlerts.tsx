@@ -63,7 +63,7 @@ const ChatAlerts = () => {
           transition={{ duration: 1, delay: 4 }} // Delay for fourth box
         >
           <Text color="#ffffff">
-            <strong>You: </strong> But please - let this be the last time...<br/><br/>
+            <strong>You: </strong> But please - let this lsbe the last time...<br/><br/>
             <span style={{fontWeight:'600'}}> 
               **Account Holder:** Rebecca White<br/>
               **Bank Name:** ABG Bank<br/>
