@@ -5,7 +5,6 @@ import ProfileCard from '../components/ProfileCard';
 import ChatAlerts from '../components/ChatAlerts';
 import Navbar from '../components/NavBar'; 
 import hearts from '../assets/applogo.svg';
-import perfectmatch from '../assets/perfectmatch.svg';
 
 const Home = () => {
   return (

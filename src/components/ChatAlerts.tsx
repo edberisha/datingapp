@@ -32,7 +32,7 @@ const ChatAlerts = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }} // Delay for second box
         >
-          <Text><strong>John:</strong> You know I wouldn't ask this unless it were an emergency.</Text>
+          <Text><strong>John:</strong> You know I wouldn&apos;t ask this unless it were an emergency.</Text>
         </MotionBox>
         <MotionBox
           style={{ 
@@ -63,7 +63,7 @@ const ChatAlerts = () => {
           transition={{ duration: 1, delay: 4 }} // Delay for fourth box
         >
           <Text color="#ffffff">
-            <strong>You: </strong> But please - let this lsbe the last time...<br/><br/>
+            <strong>You: </strong> But please - let this be the last time...<br/><br/>
             <span style={{fontWeight:'600'}}> 
               **Account Holder:** Rebecca White<br/>
               **Bank Name:** ABG Bank<br/>
@@ -72,7 +72,7 @@ const ChatAlerts = () => {
               **IBAN:** GB12FICB12345678901234<br/>
               **SWIFT/BIC Code:** FICBGB2L<br/><br/>
             </span>
-            Please let me know once you’ve made the transfer.
+            Please let me know once you&apos;ve made the transfer.
           </Text> {/* Adjust text color for better readability */}
         </MotionBox>
       </Stack>
