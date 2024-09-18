@@ -1,8 +1,4 @@
 import { Box, Text, Stack } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
-
-// Create a motion.div for Chakra UI styling
-const MotionBox = motion.div;
 
 const ChatAlerts = () => {
   return (
@@ -21,20 +17,17 @@ const ChatAlerts = () => {
         Messages
       </Text>
       <Stack spacing={3}>
-        <MotionBox
+        <Box
           style={{ 
             padding: '1rem', 
             borderWidth: '1px', 
             borderRadius: '0.375rem', 
             backgroundColor: '#f0f0f0' 
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }} // Delay for second box
         >
           <Text><strong>John:</strong> You know I wouldn&apos;t ask this unless it were an emergency.</Text>
-        </MotionBox>
-        <MotionBox
+        </Box>
+        <Box
           style={{ 
             padding: '1rem', 
             borderWidth: '1px', 
@@ -43,13 +36,10 @@ const ChatAlerts = () => {
             marginLeft: 'auto', // Align to the right
             maxWidth: '75%' // Optional: restrict width to prevent overflow
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 3 }} // Delay for third box
         >
           <Text color="#ffffff"><strong>You: </strong>I know...</Text> {/* Adjust text color for better readability */}
-        </MotionBox>
-        <MotionBox
+        </Box>
+        <Box
           style={{ 
             padding: '1rem', 
             borderWidth: '1px', 
@@ -58,9 +48,6 @@ const ChatAlerts = () => {
             marginLeft: 'auto', // Align to the right
             maxWidth: '75%' // Optional: restrict width to prevent overflow
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 4 }} // Delay for fourth box
         >
           <Text color="#ffffff">
             <strong>You: </strong> But please - let this be the last time...<br/><br/>
@@ -74,7 +61,7 @@ const ChatAlerts = () => {
             </span>
             Please let me know once you&apos;ve made the transfer.
           </Text> {/* Adjust text color for better readability */}
-        </MotionBox>
+        </Box>
       </Stack>
     </Box>
   );
