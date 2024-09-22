@@ -3,6 +3,7 @@ import { Box, Text, Stack } from '@chakra-ui/react';
 const ChatAlerts = () => {
   return (
     <Box
+    // try again
       maxW="md"  // Maximum width of the ChatAlerts box
       borderWidth={1}
       borderRadius="lg"
