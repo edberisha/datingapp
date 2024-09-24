@@ -76,7 +76,7 @@ const ChatAlerts = () => {
       boxShadow="lg"
       mx="auto"
       position="relative"
-      minW="450px"
+      minW="360px"
       height="100vh"
     >
       <Text textAlign="center" fontSize="lg" fontWeight="bold" mb={3}>
