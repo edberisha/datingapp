@@ -5,8 +5,14 @@ import ProfileCard from '../components/ProfileCard';
 import ChatAlerts from '../components/ChatAlerts';
 import Navbar from '../components/NavBar'; 
 import hearts from '../assets/applogo.svg';
+import { useRouter } from 'next/router';
+
+
+
 
 const Home = () => {
+
+  
   return (
     <>
       <Head>
@@ -17,10 +23,10 @@ const Home = () => {
       </Head>
       <Box 
       // border="2px solid purple"
-      height="200vh" 
       backgroundColor="#fcecdc" 
       p={4} 
-      position="relative">
+      position="relative"
+      height="100vh">
         <Flex
         // border="2px solid blue"
         >
@@ -38,7 +44,7 @@ const Home = () => {
                     color="#e8340c"
                     fontSize={'clamp(25px, 2vw, 32px)'}
                   >
-                    perfect match.
+                    perfect match
                   </Text>
                   
                 </Box>
@@ -61,14 +67,7 @@ const Home = () => {
           <ProfileCard />
           {/* ChatAlerts is now positioned absolutely, so it doesn't need to be here */}
         </Flex>
-        <Box
-        // border="2px solid red"
-          top={4}
-          right={4}
-          zIndex={1} // Ensure it's above other elements if needed
-        >
-          <ChatAlerts />
-        </Box>
+
         </Flex>
         <Navbar />
       </Box>

@@ -1,10 +1,21 @@
 import { Box, IconButton } from '@chakra-ui/react';
 import { AiOutlineHome, AiOutlineMessage, AiOutlineHeart, AiOutlineUser } from 'react-icons/ai';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+  const router = useRouter();
+
+  const handleMessagesClick = () => {
+    router.push('/messages'); // Navigate to the messages page
+  };
+
+  const handleHomeClick = () => {
+    router.push('/'); // Navigate to the messages page
+  };
+
   return (
     <Box
-    zIndex={10}
+      zIndex={10}
       position="fixed"
       bottom="0"
       width="100vw"
@@ -21,12 +32,14 @@ const Navbar = () => {
         icon={<AiOutlineHome />}
         variant="ghost"
         fontSize="2xl" // Increased size
+        onClick={handleHomeClick}
       />
       <IconButton
         aria-label="Messages"
         icon={<AiOutlineMessage />}
         variant="ghost"
         fontSize="2xl" // Increased size
+        onClick={handleMessagesClick} // Add click handler
       />
       <IconButton
         aria-label="Favorites"

@@ -24,13 +24,11 @@ const ProfileCard = () => {
       </Box>
       <VStack mt={4} spacing={3} align="center">
         <Text fontSize="2xl" fontWeight="bold">
-          Rebecca, 48
+          Sarah
         </Text>
-        <Text color="gray.600">Sexy Sagittarius</Text>
+        <Text color="gray.600">48</Text>
         <Stack spacing={2} align="center">
-          <Text fontWeight="bold">Facts:</Text>
-          <Text>•Looking for a yoga partner and spiritual soulmate.</Text>
-          <Text>• Let&apos;s get coffee and see where this goes?</Text>
+          <Text>Sexy Sagittarius. Looking for a yoga partner and spiritual soulmate. Let&apos;s get coffee and see where this goes? </Text>
         </Stack>
       </VStack>
     </Box>
