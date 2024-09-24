@@ -2,10 +2,8 @@ import Head from 'next/head';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image'; 
 import ProfileCard from '../components/ProfileCard';
-import ChatAlerts from '../components/ChatAlerts';
 import Navbar from '../components/NavBar'; 
 import hearts from '../assets/applogo.svg';
-import { useRouter } from 'next/router';
 
 
 
@@ -65,7 +63,6 @@ const Home = () => {
           align="center"
         >
           <ProfileCard />
-          {/* ChatAlerts is now positioned absolutely, so it doesn't need to be here */}
         </Flex>
 
         </Flex>
