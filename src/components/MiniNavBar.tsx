@@ -1,6 +1,6 @@
 // components/MiniNavBar.tsx
 import React from 'react';
-import { Box, Flex, Text, Button } from '@chakra-ui/react';
+import { Box, Flex, Button } from '@chakra-ui/react';
 
 const MiniNavBar: React.FC<{ onTabChange: (tab: string) => void }> = ({ onTabChange }) => {
   return (
