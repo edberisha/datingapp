@@ -38,7 +38,7 @@ const ChatAlerts = () => {
     { sender: 'C', text: 'We can finally start our life together.', color: '#f0f0f0' },
   ]);
   const [newMessage, setNewMessage] = useState('');
-  const chatRef = useRef<HTMLDivElement>(null); // Specify the type of the ref
+  const chatRef = useRef<HTMLDivElement>(null);
 
   const handleSend = () => {
     if (newMessage.trim()) {
@@ -52,22 +52,20 @@ const ChatAlerts = () => {
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      e.preventDefault(); // Prevents the default behavior of adding a new line
+      e.preventDefault();
       handleSend();
     }
   };
 
-
   useEffect(() => {
     if (chatRef.current) {
-      chatRef.current.scrollTop = chatRef.current.scrollHeight; // Directly set scroll position
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
     }
   }, [messages]);
 
   return (
     <Box
-      marginBottom="20vh"
-      maxW="30vw"
+      // border="2px solid purple"
       borderWidth={1}
       borderRadius="lg"
       overflow="hidden"
@@ -75,12 +73,13 @@ const ChatAlerts = () => {
       bg="#ffffff"
       boxShadow="lg"
       mx="auto"
-      position="relative"
       minW="360px"
-      height="100vh"
+      maxH="75vh" // Adjusted maximum height
+      display="flex"
+      flexDirection="column"
     >
       <Text textAlign="center" fontSize="lg" fontWeight="bold" mb={3}>
-        C
+        Curtis
       </Text>
       <Image
         src={guyphoto.src}
@@ -91,9 +90,10 @@ const ChatAlerts = () => {
         mb={4}
       />
       <Box
-        ref={chatRef} // Assign the ref to the chat box
+        ref={chatRef}
         overflowY="auto"
-        maxHeight="65vh" // Set a max height for the chat area
+        flex="1" // Allow it to grow and fill the available space
+        maxH="60vh" // Set a max height for the chat area
       >
         <Stack spacing={3}>
           {messages.map((message, index) => (
@@ -120,8 +120,7 @@ const ChatAlerts = () => {
       <Flex mt={4}>
         <Input
           value={newMessage}
-          onKeyDown={handleKeyDown} // Add the key down handler here
-
+          onKeyDown={handleKeyDown}
           onChange={(e) => setNewMessage(e.target.value)}
           placeholder="Type a message..."
           mr={2}

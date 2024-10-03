@@ -1,10 +1,7 @@
 import Head from 'next/head';
-import { Box, Flex, Text, Link } from '@chakra-ui/react';
-import Image from 'next/image'; 
+import { Box, Flex } from '@chakra-ui/react';
 import ChatAlerts from '../components/ChatAlerts';
-import ChatBox from '../components/ChatBox'; // Import the new ChatBox component
 import Navbar from '../components/NavBar'; 
-import hearts from '../assets/applogo.svg';
 
 function Messages() {
     return (
@@ -18,42 +15,23 @@ function Messages() {
         <Box 
           backgroundColor="#fcecdc" 
           p={4} 
-          position="relative">
-          <Flex>
-            <Box left={4}>
-              <Link href="/">
-                <Image 
-                  src={hearts} 
-                  alt="Hearts" 
-                  width={150} 
-                  height={150} 
-                />
-              </Link>
-              <Text
-                textAlign="center"
-                color="#e8340c"
-                fontSize={'clamp(25px, 2vw, 32px)'}
-              >
-                perfect match
-              </Text>
-            </Box>
-          </Flex>
+          position="relative" 
+          minH="100vh" // Ensure it takes full height
+
+        >
           <Flex 
+          // border="2px solid limegreen"
             mt="3vh"
             gap={10}
             justify={"center"}
             flexDir={['column','column','column','column', 'row']}
           >
             <Box
-              // ChatBox on the left
-              width={{ base: '90%', md: '300px' }} // Responsive width
-            >
-              <ChatBox />
-            </Box>
-            <Box
-              top={4}
-              right={4}
+              position="relative"
               zIndex={1}
+              p="3vh" // Padding around ChatAlerts
+              maxW="100%" // Ensures it doesn't overflow
+              boxSizing="border-box" // Includes padding in width calculations
             >
               <ChatAlerts />
             </Box>

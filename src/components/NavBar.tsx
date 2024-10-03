@@ -13,6 +13,10 @@ const Navbar = () => {
     router.push('/'); // Navigate to the messages page
   };
 
+  const handleProfileClick = () => {
+    router.push('/profile'); // Navigate to the messages page
+  };
+
   return (
     <Box
       zIndex={10}
@@ -52,6 +56,8 @@ const Navbar = () => {
         icon={<AiOutlineUser />}
         variant="ghost"
         fontSize="2xl" // Increased size
+        onClick={handleProfileClick}
+
       />
     </Box>
   );
