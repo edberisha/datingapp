@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { Box, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image'; 
-import ProfileCard from '../components/ProfileCard';
 import Navbar from '../components/NavBar'; 
 import hearts from '../assets/applogo.svg';
 import MatchCard from '@/components/MatchCard';
