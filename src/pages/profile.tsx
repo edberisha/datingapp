@@ -38,9 +38,10 @@ const profile = () => {
                     height={150} 
                   />
                   <Text
+                  // border='2px solid red'
                     textAlign="center"
                     color="#e8340c"
-                    fontSize={'clamp(25px, 2vw, 32px)'}
+                    fontSize={'clamp(15px, 1vw, 22px)'}
                   >
                     perfect match
                   </Text>

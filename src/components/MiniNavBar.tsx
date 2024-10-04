@@ -8,14 +8,21 @@ const MiniNavBar: React.FC<{ onTabChange: (tab: string) => void }> = ({ onTabCha
         <Button 
           onClick={() => onTabChange('matches')}
           variant="link" 
-          color="#e8340c"
+          color="white"
+          bg="#e8340c"
+          padding={2}
+          fontSize={['12px','14px','14px','14px','16px','18px']}
+
         >
           My Matches
         </Button>
         <Button 
           onClick={() => onTabChange('out-there')} 
           variant="link" 
-          color="#e8340c"
+          color="white"
+          bg="#e8340c"
+          padding={2}
+          fontSize={['12px','14px','14px','14px','16px','18px']}
         >
           See Who&apos;s Out There
         </Button>

@@ -1,8 +1,19 @@
 import { Box, Text, Stack, Image, Input, Button, Flex } from '@chakra-ui/react';
 import { useState, useEffect, useRef } from 'react';
 import guyphoto from '../assets/guyphoto.jpeg';
+import { AiOutlineLeft } from 'react-icons/ai'; // Left arrow icon
+import { useRouter } from 'next/router';
+
+
 
 const ChatAlerts = () => {
+
+  const router = useRouter();
+
+  const handleProfileClick = () => {
+    router.push('/profile'); // Navigate to the messages page
+  };
+
   const [messages, setMessages] = useState([
     { sender: 'S', text: 'Nice collar.', color: '#e8340c' },
     { sender: 'C', text: 'Thanks. ;', color: '#f0f0f0' },
@@ -73,11 +84,20 @@ const ChatAlerts = () => {
       bg="#ffffff"
       boxShadow="lg"
       mx="auto"
-      minW="360px"
+      width={{ base: "90%"}} // Responsive width
       maxH="75vh" // Adjusted maximum height
       display="flex"
       flexDirection="column"
     >
+      <Box>
+      <AiOutlineLeft 
+      size="25"
+      cursor="pointer"
+      onClick={handleProfileClick}
+      />
+
+      </Box>
+
       <Text textAlign="center" fontSize="lg" fontWeight="bold" mb={3}>
         Curtis
       </Text>

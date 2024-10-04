@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Box, Flex } from '@chakra-ui/react';
 import ChatAlerts from '../components/ChatAlerts';
 import Navbar from '../components/NavBar'; 
+import { AiOutlineLeft } from 'react-icons/ai'; // Left arrow icon
 
 function Messages() {
     return (
@@ -17,7 +18,6 @@ function Messages() {
           p={4} 
           position="relative" 
           minH="100vh" // Ensure it takes full height
-
         >
           <Flex 
           // border="2px solid limegreen"
@@ -26,6 +26,7 @@ function Messages() {
             justify={"center"}
             flexDir={['column','column','column','column', 'row']}
           >
+
             <Box
               position="relative"
               zIndex={1}
@@ -33,6 +34,7 @@ function Messages() {
               maxW="100%" // Ensures it doesn't overflow
               boxSizing="border-box" // Includes padding in width calculations
             >
+
               <ChatAlerts />
             </Box>
           </Flex>
