@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { Box, Flex } from '@chakra-ui/react';
 import ChatAlerts from '../components/ChatAlerts';
 import Navbar from '../components/NavBar'; 
-import { AiOutlineLeft } from 'react-icons/ai'; // Left arrow icon
 
 function Messages() {
     return (
