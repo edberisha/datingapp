@@ -84,8 +84,6 @@ const ChatAlerts = () => {
       bg="#ffffff"
       boxShadow="lg"
       mx="auto"
-      width={{ base: "90%"}} // Responsive width
-      maxH="75vh" // Adjusted maximum height
       display="flex"
       flexDirection="column"
     >
@@ -97,6 +95,7 @@ const ChatAlerts = () => {
       />
 
       </Box>
+
 
       <Text textAlign="center" fontSize="lg" fontWeight="bold" mb={3}>
         Curtis
