@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Image } from '@chakra-ui/react';
 import { FaRegHeart } from 'react-icons/fa'; // Heart icon
 import { AiOutlineClose, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'; // X icon, Left and Right arrows
+import { useSwipeable } from 'react-swipeable'; // Import swipeable
 
 // Import all dater images
 import dater1 from '../assets/dater1.jpg';
@@ -52,6 +53,13 @@ const taglines = [
 const MatchCard: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Track current image index
 
+  // Handle swipe events
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleSwipeRight(),
+    onSwipedRight: () => handleSwipeLeft(),
+    trackMouse: true, // Allow mouse tracking for desktop
+  });
+
   // Function to handle swiping right
   const handleSwipeRight = () => {
     if (currentIndex < daterImages.length - 1) {
@@ -68,19 +76,20 @@ const MatchCard: React.FC = () => {
 
   return (
     <Box
+      {...handlers} // Spread handlers to the main box
       borderWidth={1}
       borderRadius="lg"
       overflow="hidden"
       boxShadow="lg"
       mx="auto"
-      width="460px"
+      width={{ base: "90%", md: "460px" }} // Responsive width
       mb={4}
       bg={"white"}
     >
       {/* TOP COMPONENT */}
       <Box display="flex" flexDir="row">
         <Box 
-          fontSize={'20px'}
+          fontSize={{ base: '18px', md: '20px' }} // Responsive font size
           fontWeight="550"
           flex='1' 
           textAlign="center" 
@@ -94,14 +103,13 @@ const MatchCard: React.FC = () => {
       </Box>
 
       {/* MIDDLE COMPONENT */}
-      <Box display="flex" justifyContent="center" height="300px" overflow="hidden">
+      <Box display="flex" justifyContent="center" height={{ base: "200px", md: "300px" }} overflow="hidden">
         <Image 
           src={daterImages[currentIndex].src} 
           alt="Profile Picture" 
           maxW="100%" 
           maxH="100%"
           objectFit="cover"
-          height="300px" // Set fixed height for images
         />
       </Box>
 
