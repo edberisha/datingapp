@@ -3,22 +3,19 @@ import { Box, Image } from '@chakra-ui/react';
 import { useSwipeable } from 'react-swipeable';
 import { FaRegHeart } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import dater1 from '../assets/REGGIE/reggie1.jpg';
-import dater2 from '../assets/REGGIE/reggie2.jpg';
-import dater3 from '../assets/REGGIE/reggie3.jpg';
-import dater4 from '../assets/REGGIE/reggie4.jpg';
+import dater1 from '../assets/GERALD/gerald1.jpg';
+import dater2 from '../assets/GERALD/gerald2.jpg';
+import dater3 from '../assets/GERALD/gerald3.jpg';
 
-const daterImages = [dater1, dater2, dater3, dater4];
+const daterImages: string[] = [
+  dater1.src,
+  dater2.src,
+  dater3.src,
+];
 
-const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => {
+const MatchCardTwo: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const daterImages: string[] = [
-    dater1.src,
-    dater2.src,
-    dater3.src,
-    dater4.src,
-  ];
   const handlers = useSwipeable({
     onSwipedLeft: () => handleSwipeRight(),
     onSwipedRight: () => handleSwipeLeft(),
@@ -38,7 +35,16 @@ const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => 
   };
 
   return (
-    <Box {...handlers} borderWidth={1} borderRadius="60px" overflow="hidden" boxShadow="lg" mx="auto" mb={4} bg={"white"}>
+    <Box
+      {...handlers}
+      borderWidth={1}
+      borderRadius="60px"
+      overflow="hidden"
+      boxShadow="lg"
+      mx="auto"
+      mb={4}
+      bg={"white"}
+    >
       <Box display="flex" flexDir="column" justifyContent="center" overflow="hidden">
         <Image 
           src={daterImages[currentIndex]} 
@@ -49,12 +55,12 @@ const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => 
         />
         <Box display="flex" flexDir="row">
           <Box fontSize={{ base: '18px', md: '20px' }} fontWeight="550" flex='1' textAlign="left" pl={10} pt={2}>
-            Reggie, 32
+            Gerald, 29
           </Box>
         </Box>
         <Box display="flex" flexDir="row">
           <Box fontSize={{ base: '12px', md: '14px' }} fontWeight="450" color="gray" textAlign="left" pl={10} pt={0} pb={0}>
-            You both like cooking
+            Joined Perfect Match yesterday
           </Box>
         </Box>
       </Box>
@@ -73,7 +79,7 @@ const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => 
           </Box>
         </Box>
         <Box flex="2" textAlign="center" fontSize={'15px'}>
-          Fluent in sarcasm and love can you keep up please
+          Adventurer at heart seeks co-pilot for life’s ride
         </Box>
         <Box flex="1" display="flex" alignItems="center" justifyContent="center">
           <Box 
@@ -87,7 +93,7 @@ const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => 
             <FaRegHeart 
               color="red" 
               size={24} 
-              onClick={onHeartClick} 
+              onClick={onHeartClick} // Call the handler when clicked
             />
           </Box>
         </Box>
@@ -96,4 +102,4 @@ const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => 
   );
 };
 
-export default MatchCard;
+export default MatchCardTwo;
