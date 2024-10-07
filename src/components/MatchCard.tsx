@@ -8,7 +8,6 @@ import dater2 from '../assets/REGGIE/reggie2.jpg';
 import dater3 from '../assets/REGGIE/reggie3.jpg';
 import dater4 from '../assets/REGGIE/reggie4.jpg';
 
-const daterImages = [dater1, dater2, dater3, dater4];
 
 const MatchCard: React.FC<{ onHeartClick: () => void }> = ({ onHeartClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
