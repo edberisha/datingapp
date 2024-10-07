@@ -4,7 +4,7 @@ import { useSwipeable } from 'react-swipeable';
 import { FaRegHeart } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import dater1 from '../assets/JIM/jim1.jpg';
-import dater2 from '../assets/JIM/jim2.jpg';
+import dater2 from '../assets/JIM/Jim2.jpg';
 
 const daterImages = [
   dater1,
