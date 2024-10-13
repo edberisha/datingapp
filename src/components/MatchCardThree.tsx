@@ -26,7 +26,7 @@ const MatchCardThree: React.FC = () => {
     }
   };
 
-  const handleSwipeLeft = () => {
+  const handleSwipeLeft = () => { 
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
